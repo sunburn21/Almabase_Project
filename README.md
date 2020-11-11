@@ -1,4 +1,4 @@
-npm install (node module zip krra hu jaroort na pdega shayad install ki)
+npm install 
 npm start
 
 api (local)
