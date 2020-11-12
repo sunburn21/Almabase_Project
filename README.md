@@ -6,6 +6,12 @@ This project is my submission for the <b>Almabase Engineering Intern Task</b> by
 
 A live demo of this project is deployed on heroku [here](https://githubtaskalmabase.herokuapp.com/).
 
+### Screenshots
+
+![](https://user-images.githubusercontent.com/36687316/98943188-1dd56f80-2515-11eb-8cec-105ecbdf81c1.jpg)
+![enter image description here](https://user-images.githubusercontent.com/36687316/98943392-67be5580-2515-11eb-9030-c115bacf22f6.jpg)
+![enter image description here](https://user-images.githubusercontent.com/36687316/98943490-989e8a80-2515-11eb-9f03-015cdf46f982.jpg)
+
 ### Tech Stack
 
 <b>Node.js:</b>
@@ -79,13 +85,13 @@ GET /api/org
     n                       number
     m                       number
 
-#####curl example
+> Curl example
 
 ```
 curl --location --request GET 'http://localhost:4000/api/org?orgName=google&n=1&m=5'
 ```
 
-#####response
+> Response
 
 ```json
 [
@@ -127,6 +133,3 @@ curl --location --request GET 'http://localhost:4000/api/org?orgName=google&n=1&
 ]
 ```
 
-### Improvements / Future scope / Thing's I would have done if alotted more time
-
-1. Github login: User can login to his/her github account, this will remove the 60 requests an hour limit.
