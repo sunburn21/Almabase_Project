@@ -34,7 +34,7 @@ node -v
 Install the dependencies and start the server.
 
 ```sh
-$ cd almabasetask
+$ cd Almabase_Project
 $ npm install
 $ npm start
 
