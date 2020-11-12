@@ -1,7 +1,14 @@
+/**
+ * @file
+ * @author Sunny
+ *
+ * Entry point of the REST api
+ */
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const serverless = require('serverless-http');
+const serverless = require("serverless-http");
 const app = express();
 const path = require("path");
 const organisation = require("./route/organisation");
@@ -19,8 +26,8 @@ app.use(express.static("public"));
 //routes
 app.use("/api", organisation);
 
+//Driver
 app.listen(port, () => {
   console.log(`app is running at:`);
   console.log(`http://localhost:${port}`);
 });
-

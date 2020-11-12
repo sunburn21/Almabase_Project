@@ -1,22 +1,60 @@
+/**
+ * @file
+ * @author Sunny
+ *
+ * controllers of endpoints
+ */
+
 const { getTopNRepos, getTopMCommittees } = require("./helper/githubcall");
 
+/**
+ * Middleware that sets the orgName parameter
+ *
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ * @param {string} orgName
+ */
 exports.getOrgName = (req, res, next, orgName) => {
   req.orgName = orgName;
   next();
 };
 
+/**
+ * Middleware that sets n parameter
+ *
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ * @param {number} n
+ */
 exports.getN = (req, res, next, n) => {
   req.n = n;
   next();
 };
 
+/**
+ * Middleware that sets m parameter
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ * @param {number} m
+ */
 exports.getM = (req, res, next, m) => {
   req.m = m;
   next();
 };
 
-exports.getTopNRepoMContrib = async (req, res, next) => {
-  var {orgName,n,m} = req.query;
+/**
+ * controller method
+ *
+ * return top n repostories and its top m contributors
+ *
+ * @param {*} req
+ * @param {*} res
+ */
+exports.getTopNRepoMContrib = async (req, res) => {
+  var { orgName, n, m } = req.query;
 
   const topNrepos = await getTopNRepos(orgName, n);
   var nrepoMcontrib = [];

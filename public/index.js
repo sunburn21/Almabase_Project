@@ -1,11 +1,25 @@
+/**
+ * @file
+ * @author Sunny
+ *
+ * Script linked to index.html
+ */
+
 var inputOrg = document.getElementById("org");
 var inputN = document.getElementById("n");
 var inputM = document.getElementById("m");
 var spinner = document.getElementById("spinner");
 
+/**
+ * Handles onClick of submit button in the form
+ *
+ * @param {*} event
+ */
 const onSubmit = (event) => {
   event.preventDefault();
   spinner.style.display = "block";
+
+  //calling the Api
   var endpoint = `api/org/?orgName=${inputOrg.value}&n=${inputN.value}&m=${inputM.value}`;
   var url = `${window.location.href}${endpoint}`;
   console.log(url);
@@ -36,6 +50,13 @@ const onSubmit = (event) => {
     .catch((error) => console.log(error));
 };
 
+
+/**
+ * return html containing repository and contributor information to be injected in the DOM
+ *
+ * @param {Array} data
+ * @returns {string} html
+ */
 const getInnerHtml = (data) => {
   var html = "";
   data.map((repo) => {
@@ -44,6 +65,13 @@ const getInnerHtml = (data) => {
   return html;
 };
 
+
+/**
+ * return html string to be injected of a particular repository.
+ *
+ * @param {object} repo
+ * @returns {string} html
+ */
 const getProcessedHtml = (repo) => {
   var html = "";
   var repoName = repo.repo;

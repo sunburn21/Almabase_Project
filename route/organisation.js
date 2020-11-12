@@ -1,3 +1,10 @@
+/**
+ * @file 
+ * @author Sunny
+ * 
+ * endpoints of REST API
+ */
+
 const express = require(`express`);
 const router = express.Router();
 const {
@@ -7,11 +14,17 @@ const {
   getTopNRepoMContrib,
 } = require("../controller/organisation");
 
-//params
+/**
+ * route parameters
+ */
 router.param("orgName", getOrgName);
 router.param("n", getN);
 router.param("m", getM);
 
-//routes;
+/**
+ * endpoint
+ */
 router.get("/org", getTopNRepoMContrib);
+
+
 module.exports = router;
