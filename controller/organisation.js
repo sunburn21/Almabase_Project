@@ -16,9 +16,7 @@ exports.getM = (req, res, next, m) => {
 };
 
 exports.getTopNRepoMContrib = async (req, res, next) => {
-  var orgName = req.orgName;
-  var n = req.n;
-  var m = req.m;
+  var {orgName,n,m} = req.query;
 
   const topNrepos = await getTopNRepos(orgName, n);
   var nrepoMcontrib = [];

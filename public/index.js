@@ -6,7 +6,7 @@ var spinner = document.getElementById("spinner");
 const onSubmit = (event) => {
   event.preventDefault();
   spinner.style.display = "block";
-  var endpoint = `api/org/${inputOrg.value}/${inputN.value}/${inputM.value}`;
+  var endpoint = `api/org/?orgName=${inputOrg.value}&n=${inputN.value}&m=${inputM.value}`;
   var url = `${window.location.href}${endpoint}`;
   console.log(url);
   fetch(url, {
