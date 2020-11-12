@@ -9,12 +9,15 @@ A live demo of this project is deployed on heroku [here](https://githubtaskalmab
 
   <b>Node.js:</b>
     Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-    <b>Express.js:</b>
-    Express is a minimal and flexible Node.js web application framework that provides a robust set of features for APIs.
-    <b>Bootstrap:</b>
-    Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
-    <b>HTML5:</b>
-    HTML5 is a markup language used for structuring and presenting content on the World Wide Web
+    
+  <b>Express.js:</b>
+  Express is a minimal and flexible Node.js web application framework that provides a robust set of features for APIs.
+
+  <b>Bootstrap:</b>
+  Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+
+  <b>HTML5:</b>
+  HTML5 is a markup language used for structuring and presenting content on the World Wide Web
   
     
 
