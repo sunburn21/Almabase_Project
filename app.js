@@ -8,7 +8,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const serverless = require("serverless-http");
 const app = express();
 const path = require("path");
 const organisation = require("./route/organisation");
