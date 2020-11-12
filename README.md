@@ -88,7 +88,7 @@ GET /api/org
 > Curl example
 
 ```
-curl --location --request GET 'http://localhost:4000/api/org?orgName=google&n=1&m=5'
+curl --location --request GET 'https://githubtaskalmabase.herokuapp.com/api/org/?orgName=google&n=1&m=5'
 ```
 
 > Response
